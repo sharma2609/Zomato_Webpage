@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Merriweather', serif;
-    background-color: #f9fafc;
+    background-color: #ebf2ff;
 }
 
 .navbar {
@@ -24,7 +24,7 @@ body {
     width: 100%;
 }
 
-.nav_item {
+.button_primary {
     background-image: linear-gradient(to right,
             #ff512f 0%,
             #dd2476 50%,
@@ -36,25 +36,130 @@ body {
     font-weight: 600;
 }
 
-.nav_item:hover {
+.button_primary:hover {
     border: 2px solid #ff6767;
     cursor: pointer;
 }
 
+.container {
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.hero_image_container {
+    width: 100%;
+}
+
+.hero_image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 25px 50px -12px rgb(0, 0, 0 / 25%);
+}
+
+.hero_text {
+    font-weight: 800;
+    font-size: 30px;
+    margin: 20px 0;
+    color: #1d3557;
+}
+
+.food_card_description {
+    padding: 15px;
+}
+
+.food_card {
+    background-color: #f9f9f9;
+}
+
+.food_card_image_container {
+    width: 100%;
+}
+
+.food_image {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
+.explore_menu_text {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1d3557;
+}
+
 @media (min-width: 768px) {
+    .explore_menu_container {
+        position: relative;
+    }
+
+    .explore_menu_gradient_bg {
+        position: absolute;
+        z-index: -1;
+        transform: skewY(-5deg);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right,
+                #ff512f 0%,
+                #dd2476 50%,
+                #ff512f 100%);
+    }
+
+    #pizza {
+        margin-top: -20px;
+    }
+
+    .explore_menu_list {
+        display: flex;
+        margin-top: 48px;
+        gap: 15px;
+        padding: 0 30px;
+    }
+
     .navbar {
         justify-content: space-between;
         padding: 10px 30px;
     }
+
+    .hero_container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
 }
 
-@media (min-width:1024) {
+@media (min-width:992px) {
+    .explore_menu_text {
+        font-size: 48px;
+    }
+
+    .explore_menu_list {
+        gap: 25px;
+    }
+
+    .container {
+        width: 70%;
+    }
+
     .navbar_brand {
         width: 150px;
     }
 
-    .nav_item {
+    .button_primary {
         padding: 20px;
         font-size: 20px;
+    }
+
+    .hero_description {
+        width: 100%;
+    }
+
+    .hero_text {
+        font-size: 50px;
     }
 }
